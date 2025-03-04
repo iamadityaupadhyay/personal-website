@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rohit Kharwar</title>
+  <title>Aditya Upadhyay</title>
 
   <!-- bootstrap css cdn link  -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -29,13 +29,76 @@
 
   <!-- jquery cdn link  -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <style>
+    /* Add dark theme variables */
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #333333;
+      --primary-color: #1e6cd1;
+      --secondary-color: #fca61f;
+    }
+
+    .dark-theme {
+      --bg-color: #1b1b1b;
+      --text-color: #ffffff;
+      --primary-color: #1e6cd1;
+      --secondary-color: #ff9e9e;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    /* Add dark theme overrides */
+    .dark-theme .navbar,
+    .dark-theme .card,
+    .dark-theme .service-card,
+    .dark-theme .education-card {
+      background-color: #2d2d2d !important;
+      color: white !important;
+    }
+     
+    .dark-theme .home {
+      background: linear-gradient(33deg, #1a1a1a 0%, #2d2d2d 100%);
+    }
+
+    .dark-theme .skill {
+      background-color: #1a1a1a;
+    }
+     
+    /* Add form styling */
+    .contact-form input,
+    .contact-form textarea {
+      background: rgba(255, 255, 255, 0.1) !important;
+      color: var(--text-color) !important;
+      border: 1px solid var(--secondary-color) !important;
+    }
+    .dark-theme .navbar {
+      background-color: #2d2d2d !important;
+    }
+    
+    .dark-theme .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+    
+    .dark-theme .navbar-nav .nav-link:hover {
+      color: white !important;
+    }
+    
+    .dark-theme .navbar-brand {
+      color: white !important;
+    }
+   
+  </style
 </head>
 
 <body>
   <!-- navbar starts -->
   <nav id="navbar-top" class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
     <div class="container-fluid px-5">
-      <a class="navbar-brand fw-bold fs-2" href="#" style="color: #3f396d">Rohit Kharwar</a>
+      <a class="navbar-brand fw-bold fs-2" href="#" style="color: #5247a9">Aditya Upadhyay</a>
       <button class="nav-menu d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <i class="bi bi-menu-button-fill"></i>
       </button>
@@ -55,35 +118,42 @@
           <li class="nav-item">
             <a class="nav-link" href="#blog">Blog</a>
           </li>
+          <button class="btn btn-sm  theme-toggle" onclick="toggleTheme()">🌓</button>
+          
         </ul>
       </div>
-<!--       <button class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block">Contact</button> -->
+      <a class="c-btn ms-4 py-2 px-4 rounded-pill btn btn-sm  d-none d-md-block" href="https://drive.google.com/file/d/1Xi6YOSr4Onx6L__oJXvHOau8sXyURlbZ/view?usp=sharing" target="_blank">Resume</a>
     </div>
   </nav>
-  <!-- navbar ends here -->
+
 
   <!-- home section starts  -->
   <section class="home pt-5 pb-5" id="home">
     <div class="row justify-content-evenly align-middle">
       <!-- here data-aos is used for adding aos animation  -->
       <div class="col-10 col-md-6 text-center text-md-start" data-aos="slide-right">
-        <h2 style="color: #3f396d">
-          Hello! I Am <br /><span class="c-orange">Rohit Kharwar</span>
+        <h2 >
+         I Am <br /><span  class="c-orange">Aditya Upadhyay</span>
         </h2>
-        <p class="text-muted">
-          Hi ! this is Rohit Kharwar , I am having experience in designing websites using <span class="html">
-            HTML</span> ,<span class="css">CSS</span> and <span class="js">JavaScript</span>
+        <p class="text-muted">  
+          A tech enthusiast exploring  
+          <span class="html">Web Development</span>,  
+          <span class="css">Full-Stack</span>, and  
+          <span class="js">Machine Learning</span>.  
+          Now leveling up with <span class="js">Next.js</span> to build  
+          dynamic and high-performance web apps! 🚀  
         </p>
-        <!-- <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+        
+        <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
             Hire Me
-          </button> -->
+          </button>
         <a href="" class="link ms-4 d-none">See My Work</a>
       </div>
       <div class="col-10 col-md-4 d-none d-md-block">
-        <img src="images/my-photo.png" class="img-fluid" alt="" />
+        <img loading="lazy" src="images/my-photo.png" class="img-fluid" alt="" />
       </div>
     </div>
-    <!-- apna photo do bheje nhi isi folder me daal do  -->
+
   </section>
 
 
@@ -100,7 +170,7 @@
       <div class="col-10 col-md-4" data-aos="fade-up">
         <div class="service-card">
           <div class="img">
-            <img src="images/service-icon1.png" class="w-25 img-fluid img" alt="" />
+            <img loading="lazy" src="images/service-icon1.png" class="w-25 img-fluid img" alt="" />
           </div>
           <div class="content mt-3">
             <h4>Web Design</h4>
@@ -112,7 +182,7 @@
       <div class="col-md-4 col-10" data-aos="fade-up">
         <div class="service-card">
           <div class="img">
-            <img src="images/service-icon2.png" class="w-25 img-fluid img" alt="" />
+            <img loading="lazy" src="images/service-icon2.png" class="w-25 img-fluid img" alt="" />
           </div>
           <div class="content mt-3">
             <h4>Web Development</h4>
@@ -124,12 +194,11 @@
       <div class="col-md-4 col-10" data-aos="fade-up">
         <div class="service-card">
           <div class="img">
-            <img src="images/service-icon3.png" class="w-25 img-fluid img" alt="" />
+            <img loading="lazy" src="images/service-icon3.png" class="w-25 img-fluid img" alt="" />
           </div>
           <div class="content mt-3">
-            <h4>Debugging</h4>
-            
-            
+            <h4>Machine Learnig</h4>
+              
           </div>
         </div>
       </div>
@@ -145,8 +214,8 @@
   <div class="row justify-content-evenly mt-4">
     <div class="col-md-5 col-10" data-aos="fade-right">
       <div class="education-card p-4 shadow rounded">
-        <h4>Bachelor of Computer Applications (AI/ML)</h4>
-        <p class="text-muted">Galgotias University, Greater Noida</p>
+        <h4>Bachelor of Technology (CSE)</h4>
+        <p class="text-muted">Goel Institute of Technology and Management, Lucknow</p>
         <span class="badge bg-secondary">Pursuing </span>
       </div>
     </div>
@@ -166,7 +235,25 @@
     <div class="row justify-content-evenly">
       <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
         <div class="row justify-content-evenly">
+          <div class="col-10 col-md-6 mt-4 mb-4 mt-md-0">
+            <div class="progress-card ms-3 ms-md-0">
+              <div class="circular-progress django">
+                <span class="progress-value django-progress">0%</span>
+              </div>
+              <br />
+              <span class="text">Python/Django</span>
+            </div>
+          </div>
           <div class="col-10 col-md-6">
+            <div class="progress-card ms-3 ms-md-0">
+              <div class="circular-progress mernjs">
+                <span class="progress-value mernjs-progress">0%</span>
+              </div>
+              <br />
+              <span class="text">Next.js/React.js</span>
+            </div>
+          </div>
+          <div class="col-10 mb-4 col-md-6">
             <div class="progress-card ms-3 ms-md-0">
               <div class="circular-progress html-css">
                 <span class="progress-value html-progress">0%</span>
@@ -175,6 +262,7 @@
               <span class="text">HTML /CSS</span>
             </div>
           </div>
+          
           <div class="col-10 col-md-6 mt-4 mt-md-0">
             <div class="progress-card ms-3 ms-md-0">
               <div class="circular-progress javascript">
@@ -184,6 +272,17 @@
               <span class="text">JavaScript</span>
             </div>
           </div>
+          <div class="col-10 col-md-6 mt-4 mt-md-0">
+            <div class="progress-card ms-3 ms-md-0">
+              <div class="circular-progress machine">
+                <span class="progress-value machine-progress">0%</span>
+              </div>
+              <br />
+              <span class="text">Machine Learning</span>
+            </div>
+          </div>
+          
+          
         </div>
         
       </div>
@@ -191,10 +290,13 @@
         <div class="heading mt-5 mt-md-3">
           <small>My Skills</small>
           <h3>Beautiful & Unique Digital Experiences</h3>
-          <p class="text-muted">
-            Hi, I’m Rohit Kharwar, and I’m new to the world of development. Right now, I’m figuring out how coding works
-            and trying to learn step by step. I’m really interested in creating things that can solve problems or just
-            make life easier.
+          <p class="text-muted">  
+            Hi! I’m Aditya Upadhyay, a passionate developer exploring the world of  
+            <span class="html">Web Development</span>,  
+            <span class="css">Full-Stack Engineering</span>, and  
+            <span class="js">Machine Learning</span>.  
+            I love building solutions that solve real-world problems and make life easier.  
+            Currently leveling up with <span class="js">Next.js</span> to create dynamic and high-performance web apps! 🚀  
           </p>
           <h3>What I love to do ?</h3>
           <p class="text-muted">
@@ -205,12 +307,16 @@
           </p>
           <p class="text-muted"> 
             
-          I love to share my feelings so I make friends 
+          I love to code so I am a developer! 
+          </p>
+          <p class="text-muted"> 
+            
+          I love to solve DSA! 
           </p>
           <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
             <!-- here download attribute is used for adding download functionality to button  -->
-            <a href="/" download="SampleCV"
-              style="text-decoration: none;color: #fff;">I lost my CV on hill</a>
+            <a href="https://drive.google.com/file/d/1Xi6YOSr4Onx6L__oJXvHOau8sXyURlbZ/view?usp=sharing" download="SampleCV"
+              style="text-decoration: none;color: #fff;">See here</a>
           </button>
         </div>
       </div>
@@ -236,9 +342,75 @@
     </div>
     <div class="portfolio-body">
       <div class="row justify-content-evenly px-4">
+        <!-- trackode -->
+        <div class="post col-md-4 game all col-10 mt-3 mb-10 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img loading="lazy" src="images/trackode.png" loading="lazy" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Trackode</h4>
+              <span class="badge bg-secondary badge-pill">Next.js</span>
+              <span class="badge bg-secondary badge-pill">JavaScript</span>
+              <span class="badge bg-secondary badge-pill mb-2">Quiz Conducting Website</span><br />
+              <a href="https://trackode.vercel.app/" target="_blank" class="link">Live</a>
+            </div>
+          </div>
+        </div>
+        <!-- jobedin -->
         <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
           <div class="card">
-            <img src="images/tictac.png" class="card-img-top" alt="..." />
+            <img loading="lazy" src="images/jobedin.png"  loading="lazy" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Jobedin- Job Portal</h4>
+              <span class="badge bg-secondary badge-pill">Django</span>
+              <span class="badge bg-secondary badge-pill">React.js</span>
+              <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
+              <a href="https://jobed-theta.vercel.app/" target="_blank" class="link">Live</a>
+            </div>
+          </div>
+        </div>
+        <!-- resources and carreer -->
+        <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img loading="lazy" src="images/resources.png" loading="lazy" card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Resources and Carreer</h4>
+              <span class="badge bg-secondary badge-pill">Next.js</span>
+              <span class="badge bg-secondary badge-pill">JavaScript</span>
+              <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
+              <a href="https://resourcesandcarrier.online/" target="_blank" class="link">Live</a>
+            </div>
+          </div>
+        </div>
+        <!-- blogging -->
+        <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img loading="lazy" src="images/blogging.png" loading="lazy" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Blogging </h4>
+              <span class="badge bg-secondary badge-pill">HTML/CSS</span>
+              <span class="badge bg-secondary badge-pill">JavaScript</span>
+              <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
+              <a href="https://iamadi-blog.onrender.com" target="_blank" class="link">Live(may be slow-serverless)</a>
+            </div>
+          </div>
+        </div>
+        <!-- bunk master -->
+        <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img loading="lazy" src="images/bunkmaster.png" loading="lazy" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Bunk Master</h4>
+              <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+              <span class="badge bg-secondary badge-pill">JavaScript</span>
+              <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
+              <a href="https://bunkmaster.vercel.app" target="_blank" class="link">Live</a>
+            </div>
+          </div>
+        </div>
+        <!-- tictac -->
+        <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img loading="lazy" src="images/tictac.png" loading="lazy" class="card-img-top" alt="..." />
             <div class="card-body text-center">
               <h4 class="card-title">Tic Tac Toe</h4>
               <span class="badge bg-secondary badge-pill">HTML&CSS</span>
@@ -248,10 +420,10 @@
             </div>
           </div>
         </div>
-        
+        <!-- calculator -->
         <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
           <div class="card">
-            <img src="images/calculator.png" class="card-img-top" alt="..." />
+            <img loading="lazy" src="images/calculator.png" class="card-img-top" alt="..." />
             <div class="card-body text-center">
               <h4 class="card-title">Calculator</h4>
               <span class="badge bg-secondary badge-pill">HTML&CSS</span>
@@ -261,20 +433,62 @@
             </div>
           </div>
         </div>
-        <div class="post col-md-4 website all col-10 mt-3 mt-md-0 " data-aos="fade-up">
+        <!-- ecommerce -->
+        <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
           <div class="card">
-            <img src="images/rock-paper.png" class="card-img-top" alt="..." />
+            <img loading="lazy" src="images/ecommerce.png" loading="lazy" class="card-img-top" alt="..." />
             <div class="card-body text-center">
-              <h4 class="card-title">Rock Paper Scissor</h4>
-              
-              <span class="badge bg-secondary badge-pill mb-2">Python</span><br />
-              <a href="https://github.com/ROHITKHARWAR7/rockpaper/tree/main" class="read-more-btn link">Github Repo</a>
+              <h4 class="card-title">E-commerce</h4>
+              <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+              <span class="badge bg-secondary badge-pill">JavaScript</span>
+              <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
+              <a href="https://iamadityaupadhyay.github.io/Ecommerce/" target="_blank" class="link">Live</a>
             </div>
           </div>
         </div>
+        <!-- movie recommendation syster -->
+        <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img loading="lazy" src="images/movies.png" loading="lazy" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Movie recommender</h4>
+              <span class="badge bg-secondary badge-pill">Python</span>
+              <span class="badge bg-secondary badge-pill">Machine Learning</span>
+              <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
+              <a href="https://github.com/iamadityaupadhyay/movies" target="_blank" class="link">Repo</a>
+            </div>
+          </div>
+        </div>
+        <!-- ping pong -->
+        <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img loading="lazy" src="images/pingpong.png" loading="lazy" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Ping Pong Game</h4>
+              <span class="badge bg-secondary badge-pill">Python</span>
+              
+              <span class="badge bg-secondary badge-pill mb-2">Game</span><br />
+              <a href="https://github.com/iamadityaupadhyay/PingPong" target="_blank" class="link">Repo</a>
+            </div>
+          </div>
+        </div>
+        <!-- snake game -->
+        <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img loading="lazy" src="images/snake.png" loading="lazy" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Python Console Based Snake Game</h4>
+              <span class="badge bg-secondary badge-pill">Python</span>
+              
+              <span class="badge bg-secondary badge-pill mb-2">Game</span><br />
+              <a href="https://github.com/iamadityaupadhyay/SnakeGame" target="_blank" class="link">Repo</a>
+            </div>
+          </div>
+        </div>
+        <!-- watch -->
         <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
           <div class="card">
-            <img src="images/clock.png" class="card-img-top" alt="..." />
+            <img loading="lazy" src="images/clock.png" class="card-img-top" alt="..." />
             <div class="card-body text-center">
               <h4 class="card-title">Analog Digital Clock</h4>
               <span class="badge bg-secondary badge-pill">HTML&CSS</span>
@@ -290,91 +504,67 @@
   </section>
   
 
-  <!-- ilog(image-log) section starts -->
-  <section class="blog mt-5 pb-5" id="blog">
-    <div class="heading text-center pt-5">
-      <small>Some Crispy Shots</small>
-      <h3>Travel and Memories</h3>
-    </div>
-    <div class="row justify-content-evenly px-4 mt-4" data-aos="fade-up">
-      <div class="blogpost col-md-4 col-10 mt-2 mt-md-0 game all">
-        <div class="card">
-          <img src="images/img-3.jpeg" class="card-img-top rounded-4" alt="..." />
-          <div class="card-body px-4">
-            <small>By Rohit</small><span class="ms-3">Jan 10,2025</span>
-            
-            
-            <!-- <a href="#" class="read-more-btn link" data-bs-toggle="modal" data-bs-target="#exampleModal1">Read More</a> -->
-          </div>
+ 
+  <section id="tech" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-5">Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <img loading="lazy" src="https://skillicons.dev/icons?i=python" alt="Python">
+          <span>Python</span>
+        </div>
+        <div class="tech-item">
+          <img loading="lazy" src="https://skillicons.dev/icons?i=django" alt="Django">
+          <span>Django</span>
+        </div>
+        
+        <div class="tech-item">
+          <img loading="lazy" src="https://skillicons.dev/icons?i=nextjs" alt="Next.js">
+          <span>Next.js</span>
+        </div>
+        <div class="tech-item">
+          <img loading="lazy" src="https://skillicons.dev/icons?i=js" alt="JavaScript">
+          <span>JavaScript</span>
+        </div>
+        <div class="tech-item">
+          <img loading="lazy" src="https://skillicons.dev/icons?i=react" alt="React">
+          <span>React</span>
+        </div>
+        <div class="tech-item">
+          <img loading="lazy" src="https://skillicons.dev/icons?i=tailwind" alt="tailwind">
+          <span>Tailwind</span>
+        </div>
+        <div class="tech-item">
+          <img loading="lazy" src="https://skillicons.dev/icons?i=html,css" alt="css">
+          <span>HTML/CSS</span>
+        </div>
+        <div class="tech-item">
+          <img loading="lazy" src="https://skillicons.dev/icons?i=c" alt="c">
+          <span>C</span>
+        </div>
+        <div class="tech-item">
+          <img loading="lazy" src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB">
+          <span>MongoDB</span>
+        </div>
+        <div class="tech-item">
+          <img loading="lazy" src="https://skillicons.dev/icons?i=github" alt="Git">
+          <span>GitHub</span>
+        </div>
+        
+        <div class="tech-item">
+          <img loading="lazy" src="https://skillicons.dev/icons?i=postman" alt="postman">
+          <span>Postman</span>
+        </div>
+        
+       
+        <div class="tech-item">
+          <img loading="lazy" src="https://skillicons.dev/icons?i=vercel" alt="Vercel">
+          <span>Vercel</span>
         </div>
       </div>
-      
-      <div class="blogpost col-md-4 col-10 mt-2 mt-md-0 game all">
-        <div class="card">
-          <img src="images/img-4.jpeg" class="card-img-top rounded-4" alt="..." />
-          <div class="card-body px-4">
-            <small>By Rohit</small><span class="ms-3">Jan 10,2025</span>
-            
-            
-            
-          </div>
-        </div>
-      </div>
-      <div class="blogpost col-md-4 col-10 mt-2 mt-md-0 game all">
-        <div class="card">
-          <img src="images/img-1.jpeg" class="card-img-top rounded-4" alt="..." />
-          <div class="card-body px-4">
-            <small>By Rohit</small><span class="ms-3">Jan 10,2025</span>
-            
-            
-            
-          </div>
-        </div>
-      </div>
-      <div class="blogpost col-md-4 col-10 mt-2 mt-md-0 game all">
-        <div class="card">
-          <img src="images/img-5.jpeg" class="card-img-top rounded-4" alt="..." />
-          <div class="card-body px-4">
-            <small>By Rohit</small><span class="ms-3">Jan 10,2025</span>
-            
-            
-            <!-- <a href="#" class="read-more-btn link" data-bs-toggle="modal" data-bs-target="#exampleModal1">Read More</a> -->
-          </div>
-        </div>
-      </div>
-      
-      <div class="blogpost col-md-4 col-10 mt-2 mt-md-0 game all">
-        <div class="card">
-          <img src="images/img-2.jpeg" class="card-img-top rounded-4" alt="..." />
-          <div class="card-body px-4">
-            <small>By Rohit</small><span class="ms-3">Jan 10,2025</span>
-            
-            
-            <!-- <a href="#" class="read-more-btn link" data-bs-toggle="modal" data-bs-target="#exampleModal1">Read More</a> -->
-          </div>
-        </div>
-      </div>
-      <div class="blogpost col-md-4 col-10 mt-2 mt-md-0 game all">
-        <div class="card">
-          <img src="images/img-6.jpg" class="card-img-top rounded-4" alt="..." />
-          <div class="card-body px-4">
-            <small>By Rohit</small><span class="ms-3">Jan 10,2025</span>
-            
-            
-            <!-- <a href="#" class="read-more-btn link" data-bs-toggle="modal" data-bs-target="#exampleModal1">Read More</a> -->
-          </div>
-        </div>
-      </div>
-      
-      <!-- here we will make modals if Read more link is clicked the modal will popup -->
-    
-      
-      
     </div>
   </section>
-  <!-- blog section ends here -->
-  <!--  this is to be noticed  -->
-  <!-- contact section starts -->
+  
   <section class="contact py-5" id="contact">
     <div class="heading text-center">
       <small>Get in Touch</small>
@@ -387,7 +577,7 @@
             <i class="bi bi-geo-alt-fill"></i>
           </div>
           <div class="col-11">
-            <p>Badarpur Molarband 110044 Delhi </p>
+            <p>Chinhat, Lucknow ,Uttar Pradesh, 274406 </p>
           </div>
         </div>
         <div class="row justify-content-evenly">
@@ -395,16 +585,16 @@
             <i class="bi bi-telephone-fill"></i>
           </div>
           <div class="col-11">
-            <p>+91 9129496962</p>
+            <p>+91 8840250583</p>
           </div>
         </div>
-        <!-- i am not not blind wait -->
+        
         <div class="row justify-content-evenly">
           <div class="col-1">
             <i class="bi bi-send-fill"></i>
           </div>
           <div class="col-11">
-            <p>rkharwar2016@gmail.com </p>
+            <p>uaditya219@gmail.com </p>
           </div>
         </div>
         <div class="row justify-content-evenly">
@@ -412,30 +602,34 @@
             <i class="bi bi-globe-americas"></i>
           </div>
           <div class="col-11">
-            <a href="https://www.instagram.com/ro_hit_kr56">Connect on Instagram</a>
+            <a href="https://www.instagram.com/iam_adityaupadhyay">Connect on Instagram</a>
+          </div>
+          <div class="col-1">
+            <i class="bi bi-globe-americas"></i>
           </div>
           <div class="col-11">
-            <a href="https://www.linkedin.com/in/iamrohitkharwar">Connect on Linkedin</a>
+            <a href="https://www.linkedin.com/in/iamadityaupadhyay">Connect on Linkedin</a>
           </div>
         </div>
       </div>
       <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
         <div class="contact-form">
-          <div class="mb-3">
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" />
-          </div>
-          <div class="mb-3">
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="E-mail" />
-          </div>
-          <div class="mb-3">
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Mobile No." />
-          </div>
-          <div class="mb-3">
-            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="5"></textarea>
-          </div>
-          <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-           Submit
-          </button>
+          <form action="https://formspree.io/f/xpwqyylz" method="POST">
+            <!-- Add name attributes -->
+            <div class="mb-3">
+              <input type="text" name="name" class="form-control" placeholder="Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" name="email" class="form-control" placeholder="E-mail" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" name="phone" class="form-control" placeholder="Mobile No.">
+            </div>
+            <div class="mb-3">
+              <textarea name="message" class="form-control" placeholder="Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">Submit</button>
+          </form>
         </div>
       </div>
     </div>
@@ -447,9 +641,9 @@
     <i class="bi bi-arrow-up"></i>
   </button>
 
-  <!-- footer section starts  -->
+  
   <footer class="text-center text-muted py-4">
-    <h3 class="text-white pt-4" data-aos="fade-up">Portfolio</h3>
+    <h3 class="pt-2" data-aos="fade-up">Aditya Upadhyay</h3>
     <div class="link-group mt-5" data-aos="fade-up">
       <a href="#home">Home</a>
       <div class="vr"></div>
@@ -463,39 +657,105 @@
       <a href="#contact">Contact</a>
     </div>
     <div class="social-links mt-5" data-aos="fade-up">
-      <a href="https://github.com/ROHITKHARWAR7" class="rounded-pill btn github">
+      <a href="https://github.com/iamadityaupadhyay" class="rounded-pill btn github">
         <i class="bi bi-github"></i>
       </a>
-      <a href="https://www.instagram.com/ro_hit_kr56" class="rounded-pill btn instagram">
+      <a href="https://www.instagram.com/iam_adityaupadhyay" class="rounded-pill btn instagram">
         <i class="bi bi-instagram"></i>
       </a>
-      <a href="https://www.linkedin.com/in/iamrohitkharwar" class="btn btn-danger rounded-pill linkedin">
+      <a href="https://www.linkedin.com/in/iamadityaupadhyay" class="rounded-pill btn linkedin">
         <i class="bi bi-linkedin"></i>
       </a>
     </div>
     <hr class="text-muted my-4" />
 
-    <p>Rohit Kharwar © Copyright 2025 Portfolio | All Rights Reserved.</p>
+    <p>Aditya Upadhyay © Copyright 2025 Portfolio | All Rights Reserved.</p>
   </footer>
   <!-- footer section ends here -->
 
-  <!-- bootstrap javascript cdn link  -->
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
 
   <!-- AOS library javascript link  -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  
+  <!-- custom js file linking -->
+  <script src="js/script.js"></script>
   <script>
-    // initializing AOS library
+    // Enhanced theme toggle with navbar class switching
+    function toggleTheme() {
+      const body = document.body;
+      const navbar = document.querySelector('.navbar');
+      body.classList.toggle('dark-theme');
+      
+      // Toggle navbar classes
+      navbar.classList.toggle('navbar-light');
+      navbar.classList.toggle('navbar-dark');
+      navbar.classList.toggle('bg-white');
+      navbar.classList.toggle('bg-dark');
+      
+      localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
+    }
+
+    // Load saved theme
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      const navbar = document.querySelector('.navbar');
+      
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        navbar.classList.add('navbar-dark', 'bg-dark');
+        navbar.classList.remove('navbar-light', 'bg-white');
+      } else {
+        document.body.classList.remove('dark-theme');
+        navbar.classList.add('navbar-light', 'bg-white');
+        navbar.classList.remove('navbar-dark', 'bg-dark');
+      }
+    });
+
+    // Email JS configuration (replace with your Formspree endpoint)
+    const contactForm = document.querySelector('.contact-form form');
+    contactForm.action = 'https://formspree.io/f/xpwqyylz';
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending...';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          alert('Message sent successfully!');
+          contactForm.reset();
+        } else {
+          const errorData = await response.json();
+          alert(`Error: ${errorData.error || 'Failed to send message'}`);
+        }
+      } catch (error) {
+        alert('Network error. Please try again later.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Submit';
+      }
+    });
+
+    // Initialize AOS
     AOS.init({
       duration: 1000,
       offset: 50,
     });
   </script>
-  <!-- custom js file linking -->
-  <script src="js/script.js"></script>
-
 </body>
 
 </html>

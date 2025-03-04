@@ -19,6 +19,25 @@ let progresshtml = setInterval(() => {
   }
 }, htmlspeed);
 
+let machineProgress = document.querySelector(".machine"),
+  machineValue = document.querySelector(".machine-progress");
+
+let machineStartValue = 0,
+  machineEndValue = 50,
+  machinespeed = 70;
+
+let progressmachine = setInterval(() => {
+  machineStartValue++;
+
+  machineValue.textContent = `${machineStartValue}%`;
+  machineProgress.style.background = `conic-gradient(#7d2ae8 ${
+    machineStartValue * 3.6
+  }deg, #ededed 0deg)`;
+
+  if (machineStartValue == machineEndValue) {
+    clearInterval(progressmachine);
+  }
+}, machinespeed);
 // javasript progress circular bar 
 let javascriptProgress = document.querySelector(".javascript"),
   javascriptValue = document.querySelector(".javascript-progress");
@@ -40,45 +59,45 @@ let progressjs = setInterval(() => {
   }
 }, jsspeed);
 
-// php progress circular bar 
-let phpProgress = document.querySelector(".php"),
-  phpValue = document.querySelector(".php-progress");
+// django progress circular bar 
+let djangoProgress = document.querySelector(".django"),
+  djangoValue = document.querySelector(".django-progress");
 
-let phpStartValue = 0,
-  phpEndValue = 80,
-  phpspeed = 30;
+let djangoStartValue = 0,
+  djangoEndValue = 70,
+  djangospeed = 30;
 
-let progressphp = setInterval(() => {
-  phpStartValue++;
+let progressdjango = setInterval(() => {
+  djangoStartValue++;
 
-  phpValue.textContent = `${phpStartValue}%`;
-  phpProgress.style.background = `conic-gradient(#20c997 ${
-    phpStartValue * 3.6
+  djangoValue.textContent = `${djangoStartValue}%`;
+  djangoProgress.style.background = `conic-gradient(#20c997 ${
+    djangoStartValue * 3.6
   }deg, #ededed 0deg)`;
 
-  if (phpStartValue == phpEndValue) {
-    clearInterval(progressphp);
+  if (djangoStartValue == djangoEndValue) {
+    clearInterval(progressdjango);
   }
-}, phpspeed);
+}, djangospeed);
 
-// reactjs progress circular bar 
-let reactProgress = document.querySelector(".reactjs"),
-  reactValue = document.querySelector(".reactjs-progress");
+// mernjs progress circular bar 
+let mernProgress = document.querySelector(".mernjs"),
+  mernValue = document.querySelector(".mernjs-progress");
 
-let reactStartValue = 0,
-  reactEndValue = 30,
+let mernStartValue = 0,
+  mernEndValue = 50,
   rjsspeed = 30;
 
-let progressreact = setInterval(() => {
-  reactStartValue++;
+let progressmern = setInterval(() => {
+  mernStartValue++;
 
-  reactValue.textContent = `${reactStartValue}%`;
-  reactProgress.style.background = `conic-gradient(#3f396d ${
-    reactStartValue * 3.6
+  mernValue.textContent = `${mernStartValue}%`;
+  mernProgress.style.background = `conic-gradient(#3f396d ${
+    mernStartValue * 3.6
   }deg, #ededed 0deg)`;
 
-  if (reactStartValue == reactEndValue) {
-    clearInterval(progressreact);
+  if (mernStartValue == mernEndValue) {
+    clearInterval(progressmern);
   }
 }, rjsspeed);
 
